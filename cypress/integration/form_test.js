@@ -15,6 +15,9 @@ describe("Testing our volunteer from", function() {
         cy.get("#positions")
             .select("Yard Work")
             .should("have.value", "Yard Work");
-        cy.get('[type="checkbox"]').check();
+        cy.get('[type="checkbox"]')
+            .check()
+            .should("be.checked");
+        cy.get("button").click();
     });
 });
